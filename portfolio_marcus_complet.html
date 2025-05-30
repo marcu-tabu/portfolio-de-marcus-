@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio Marcus</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+
+    #menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: white;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #444;
+      }
+
+      nav ul li {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+      }
+
+      #menu-toggle {
+        display: block;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bonjour, je suis Marcus</h1>
+    <button id="menu-toggle">☰</button>
+    <nav>
+      <ul id="menu">
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="about">
+    <h2>À propos</h2>
+    <p>Salut, je suis Marcus, étudiant en informatique passionné par le développement web et le football.</p>
+  </section>
+  <section id="projects">
+    <h2>Projets</h2>
+    <ul>
+      <li>Projet 1 - Mon site personnel</li>
+      <li>Projet 2 - Une app mobile simple</li>
+    </ul>
+  </section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Envoyez-moi un email à : marcus@example.com</p>
+  </section>
+  <footer>
+    <p>© 2025 Marcus</p>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggle = document.getElementById('menu-toggle');
+      const menu = document.getElementById('menu');
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
